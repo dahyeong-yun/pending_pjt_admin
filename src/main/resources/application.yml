@@ -18,10 +18,11 @@ spring :
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
-
+  #resources:
+    #static-locations: ${project.base-dir}/src/main/resources/static/
 logging:
   level:
     org.hibernate.SQL: debug
-    org.hibernates.type : trace # 성능 이슈 존재, 개발에서만 사용
+    org.hibernates.type : trace
 server:
   port: 8901
