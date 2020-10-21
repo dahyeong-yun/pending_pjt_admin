@@ -1,0 +1,27 @@
+spring :
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem://localhost/~/cheatsheet
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa :
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernates.type : trace # 성능 이슈 존재, 개발에서만 사용
+server:
+  port: 8901
