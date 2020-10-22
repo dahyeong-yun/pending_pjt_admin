@@ -10,4 +10,18 @@ public class HomeController {
         return "starter";
     }
 
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
+    @GetMapping("/index2")
+    public String index2() {
+        return "index2";
+    }
+    @GetMapping("/index3")
+    public String index3() {
+        return "index3";
+    }
+
 }
