@@ -1,8 +1,10 @@
 package org.cheatsheet.admin.domain.menu.entity;
 
 import lombok.Getter;
+import org.cheatsheet.admin.domain.menu.api.SystemMenuApi;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -27,7 +29,7 @@ public class SystemMenu {
     // TODO 기본 열림 설정
 
     private LocalDateTime createdTime;;
-    private LocalDateTime modifiedTime;
+    private LocalDateTime lastModifiedTime;
 
 
     private SystemMenu() {}
@@ -38,7 +40,10 @@ public class SystemMenu {
         systemMenu.name = menuName;
         systemMenu.url = menuUrl;
         systemMenu.usage = menuUsage;
+        systemMenu.createdTime = LocalDateTime.now();
+        systemMenu.lastModifiedTime = LocalDateTime.now();
 
         return systemMenu;
     }
+
 }
